@@ -35,5 +35,5 @@ Boilerplates in this directory will be automatically detected by PyScaffold and 
 
 ```bash
 # Use a custom boilerplate
-python run.py create my-project --use-boilerplate fastapi-template
+python run.py create my-project --use-boilerplate sample-template
 ```
