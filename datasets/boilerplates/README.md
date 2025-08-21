@@ -8,7 +8,7 @@ Each boilerplate should be in its own subdirectory:
 
 ```
 datasets/boilerplates/
-├── fastapi-template/
+├── sample-template/
 │   ├── src/
 │   │   └── main.py
 │   ├── requirements.txt
