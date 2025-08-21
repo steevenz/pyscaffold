@@ -116,7 +116,7 @@ logging:
 # Boilerplate settings
 boilerplate:
   # Directory to search for boilerplate templates
-  templates_dir: "templates"
+  templates_dir: "datasets/boilerplates"
   
   # Default boilerplate templates
   available:

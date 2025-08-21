@@ -88,9 +88,9 @@ def get_git_user() -> Dict[str, str]:
         return {}
 
 def find_available_boilerplates() -> Dict[str, Path]:
-    """Find available boilerplates in the boilerplates directory."""
+    """Find available boilerplates in the datasets/boilerplates directory."""
     boilerplates = {}
-    boilerplates_dir = Path("boilerplates")
+    boilerplates_dir = Path("datasets/boilerplates")
     
     if boilerplates_dir.exists():
         for boilerplate_dir in boilerplates_dir.iterdir():
