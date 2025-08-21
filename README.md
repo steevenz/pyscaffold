@@ -93,16 +93,16 @@ We've got templates for every need:
 
 ## ⚙️ Advanced Features
 
-### Custom Templates
+### Custom Boilerplates
 
-Create your own templates in the `templates/` directory:
+Create your own boilerplates in the `datasets/boilerplates/` directory:
 
 ```
-templates/
-├── my_custom_template/
+datasets/boilerplates/
+├── my_custom_boilerplate/
 │   ├── src/
 │   ├── config/
-│   └── template-config.json
+│   └── boilerplate-config.json
 └── data_science_plus/
     ├── notebooks/
     ├── models/
