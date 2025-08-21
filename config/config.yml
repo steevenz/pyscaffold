@@ -1,0 +1,208 @@
+# PyScaffold Configuration File
+# This file contains default settings for PyScaffold
+
+# Default project settings
+defaults:
+  project_type: "general"  # general, data_science, web_api, cli_tool
+  license: "MIT"           # MIT, Apache-2.0, GPL-3.0, None
+  include_ai: false
+  include_trainer: false
+  use_boilerplate: false
+
+# Author information (will be overridden by git config if available)
+author:
+  name: "Steeven Andrian"
+  email: "steevenz@ymail.com"
+
+# Project structure settings
+structure:
+  # Standard folders that will always be created
+  base_folders:
+    - "bin"
+    - "caches"
+    - "config"
+    - "datasets"
+    - "logs"
+    - "outputs"
+    - "src"
+    - "src/core"
+    - "src/clients"
+    - "src/services"
+    - "src/helpers"
+    - "tester"
+  
+  # Optional folders based on project type
+  conditional_folders:
+    web_api:
+      - "src/api"
+      - "src/routers"
+      - "src/database"
+    data_science:
+      - "notebooks"
+      - "models"
+      - "src/features"
+      - "src/visualization"
+    ai:
+      - "src/ai"
+    trainer:
+      - "trainer"
+
+# File templates settings
+templates:
+  # Standard files that will always be created
+  base_files:
+    - ".gitignore"
+    - ".env"
+    - "pyproject.toml"
+    - "requirements.txt"
+    - "README.md"
+    - "docker-compose.yml"
+    - "Dockerfile"
+    - "src/main.py"
+    - "run.py"
+  
+  # Setup scripts
+  setup_scripts:
+    - "bin/setup.sh"
+    - "bin/setup.bat"
+    - "bin/setup.ps1"
+
+# Dependencies for different project types
+dependencies:
+  general:
+    - "python-dotenv"
+    - "pydantic"
+    - "loguru"
+  
+  data_science:
+    - "python-dotenv"
+    - "pandas"
+    - "numpy"
+    - "matplotlib"
+    - "seaborn"
+    - "scikit-learn"
+    - "jupyter"
+    - "ipykernel"
+  
+  web_api:
+    - "python-dotenv"
+    - "fastapi"
+    - "uvicorn[standard]"
+    - "pydantic"
+    - "sqlalchemy"
+    - "alembic"
+  
+  cli_tool:
+    - "python-dotenv"
+    - "click"
+    - "typer"
+
+# UI Settings
+ui:
+  # Default UI mode: cli
+  default_mode: "cli"
+  
+  # CLI settings
+  cli:
+    show_progress: true
+    use_colors: true
+
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/pyscaffold.log"
+
+# Boilerplate settings
+boilerplate:
+  # Directory to search for boilerplate templates
+  templates_dir: "templates"
+  
+  # Default boilerplate templates
+  available:
+    - "basic-python"
+    - "fastapi-template"
+    - "data-science-template"
+    - "cli-tool-template"
+
+# Git settings
+git:
+  # Auto-initialize git repository
+  auto_init: true
+  
+  # Default git ignore patterns
+  ignore_patterns:
+    - "__pycache__/"
+    - "*.py[cod]"
+    - "*$py.class"
+    - "*.so"
+    - ".Python"
+    - "build/"
+    - "develop-eggs/"
+    - "dist/"
+    - "downloads/"
+    - "eggs/"
+    - ".eggs/"
+    - "lib/"
+    - "lib64/"
+    - "parts/"
+    - "sdist/"
+    - "var/"
+    - "wheels/"
+    - "*.egg-info/"
+    - ".installed.cfg"
+    - "*.egg"
+    - "MANIFEST"
+    - "*.manifest"
+    - "*.spec"
+    - "pip-log.txt"
+    - "pip-delete-this-directory.txt"
+    - ".tox/"
+    - ".coverage"
+    - ".pytest_cache/"
+    - "htmlcov/"
+    - ".env"
+    - ".venv"
+    - "env/"
+    - "venv/"
+    - "ENV/"
+    - "env.bak/"
+    - "venv.bak/"
+    - ".spyderproject"
+    - ".spyproject"
+    - ".rope_project_settings"
+    - ".vscode/"
+    - ".idea/"
+    - "*.swp"
+    - "*.swo"
+    - "*~"
+
+# Docker settings
+docker:
+  # Default Python version for Dockerfile
+  python_version: "3.11"
+  
+  # Default base image
+  base_image: "python:3.11-slim"
+  
+  # Default working directory in container
+  workdir: "/app"
+  
+  # Default exposed port
+  port: 8000
+
+# Testing settings
+testing:
+  # Default test framework
+  framework: "pytest"  # pytest, unittest
+  
+  # Test directory structure
+  structure:
+    - "tester/__init__.py"
+    - "tester/test_main.py"
+  
+  # Default test dependencies
+  dependencies:
+    - "pytest"
+    - "pytest-cov"
+    - "pytest-mock"
